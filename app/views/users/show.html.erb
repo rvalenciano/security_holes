@@ -1,0 +1,14 @@
+<h2>User profile</h2>
+
+<div class="well well-lg">
+  <h4>Email : </h3><%= @user.email %>
+  <h4>Admin? : </h3>
+  <% if @user.admin %>
+      Yes
+  <% else %>
+      No
+  <% end %>
+</div>
+<br>
+<%= link_to 'Edit User', edit_user_path(@user) %> |
+<%= link_to 'Back', user_path %>
